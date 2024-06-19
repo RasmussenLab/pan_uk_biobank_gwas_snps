@@ -1,0 +1,11 @@
+# folders
+.snakemake
+
+# files
+*.log
+*.out
+*.csv
+*.tsv
+
+# artefacts of workflow
+data
