@@ -1,5 +1,10 @@
 # MOVE on UK Biobank
 
+This repository aggregates SNPs across the high-quality GWAS results of the Pan-UK Biobank project.
+Using a threshold of `-log10(p-value) > 16`, and using all high-quality GWAS the aggregated 
+file with -log10 pvalues contains X SNPs from Y studies.
+
+
 ## Setup
 
 Using anaconda for environments
@@ -18,7 +23,7 @@ can be found
 [here](https://docs.google.com/spreadsheets/d/1AeeADtT0U1AukliiNyiVzVRdLYPkTbruQSk38DeutU8/edit#gid=1450719288)
 
 I provided a brief script which creates a `config/high_quality_gwas.yaml` file for 
-the [Snakemake workflow](Snakefile).
+the [Snakemake workflow](Snakefile) in [`0_get_high_quality_gwas.py`](0_get_high_quality_gwas.py).
 
 ## Snakemake
 

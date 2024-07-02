@@ -12,8 +12,8 @@ url_template = (
     "https://pan-ukb-us-east-1.s3.amazonaws.com/sumstats_flat_files/{file}.tsv.bgz"
 )
 
-folder_gwas_downloaded = "gwas_downloaded"
-folder_gwas_filtered = "gwas_filtered"
+folder_gwas_downloaded = "data/gwas_downloaded"
+folder_gwas_filtered = "data/gwas_filtered"
 files = config["urls"]
 
 
@@ -32,7 +32,7 @@ rule combine_gwas:
         import pandas as pd
 
         print(repr(input.filtered_gwas))
-        folder_duplicated = Path("gwas_duplicated")
+        folder_duplicated = Path("data/gwas_duplicated")
         folder_duplicated.mkdir(exist_ok=True)
 
         df = list()
